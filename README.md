@@ -5,6 +5,8 @@ This is final project of final semester in robotic - INT3409-21
 ## Overview
 - Download [Pretrained model](https://drive.google.com/drive/folders/1oKgneR-6lbXfJXuVyPSHhmMsjxXfyApH?usp=sharing) and put in `./models/`
 - Run application: `python ./src/main.py`
+- Use `A S W D` to move robot
+- Use `J K L I` to rotate or look up/down
 ## Installation
 
 1. Clone this repository.
