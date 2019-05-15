@@ -1,8 +1,8 @@
 import cv2
 import numpy as np
 
-from keras_retinanet.utils.visualization import draw_box, draw_caption
-from keras_retinanet.utils.colors import label_color
+from keras_retinanet.keras_retinanet.utils.visualization import draw_box, draw_caption
+from keras_retinanet.keras_retinanet.utils.colors import label_color
 
 from robot import Robot
 from yolo import Yolo

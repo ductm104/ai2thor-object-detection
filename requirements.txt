@@ -1,0 +1,6 @@
+Keras==2.2.4
+numpy==1.16.3
+opencv-contrib-python==4.1.0.25
+python-dateutil==2.8.0
+python-utils==2.3.0
+tensorflow==1.13.1

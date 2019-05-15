@@ -1,10 +1,6 @@
 import numpy as np
 import cv2
 
-from keras_retinanet.utils.image import read_image_bgr, preprocess_image, resize_image
-from keras_retinanet.utils.visualization import draw_box, draw_caption
-from keras_retinanet.utils.colors import label_color
-
 class Yolo:
 
 	def __init__(self):
@@ -68,23 +64,3 @@ class Yolo:
 					boxes.append([left, top, width, height])
 
 		return boxes, classIds, confidences
-
-if __name__ == '__main__':
-	img = cv2.imread('test_image.jpg')
-	img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-
-	labels_path = './models/coco.names'
-	labels_to_names = open(labels_path).read().strip().split('\n')
-	yolo = Yolo()
-
-	boxes, labels, scores = yolo.detect(img)
-
-	for box, label, score in zip(boxes, labels, scores):
-		print(box, label, score)
-		color = label_color(label)
-		draw_box(img, box, color=color)
-		caption = "{} {:.3f}".format(labels_to_names[label], score)
-		draw_caption(img, box, caption)
-
-	cv2.imshow('out', img)
-	cv2.waitKey(0)
